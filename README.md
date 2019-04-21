@@ -1,6 +1,6 @@
 # Pagination-Algorithm
 
-This is a simple pagination algorithm implementation written for Angular app in typescript. It will produce pagination with first, last and in-between numbers with elapsed separators defined by the delta constant.
+This is a simple pagination algorithm implementation written for Angular app in typescript. It will produce pagination with first, last and in-between numbers with ellipses separator defined by the delta constant.
 
 **Example Output:**
 Delta: 2, Pages: 9
