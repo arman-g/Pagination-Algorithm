@@ -1,7 +1,7 @@
 export class SomeComponent {
   getPagination(currentPageNum, totalPageCount): Array<any> {
      const delta = 3;
-     let pages = new Array();
+     let pages = new Array<any>();
      for (let i = 0; i < totalPageCount; i++) {
        if (i === 0 || i === totalPageCount - 1
          || (i < currentPageNum + delta + 1 &&
