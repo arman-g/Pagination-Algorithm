@@ -1,5 +1,4 @@
 # Pagination-Algorithm
-Pagination algorithm implementation (TypeScript)
 
 This is a simple pagination algorithm implementation written for Angular app in typescript. It will produce pagination with first, last and in-between numbers with elapsed separators defined by the delta constant.
 
