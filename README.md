@@ -3,7 +3,7 @@ Pagination algorithm implementation (TypeScript)
 
 This is a simple pagination algorithm implementation written for Angular app in typescript. It will produce pagination with first, last and in-between numbers with elapsed separators defined by the delta constant.
 
-**Output:**
+**Example Output:**
 Delta: 2, Pages: 9
 <ul>
 <li><b><i>1</i></b>23…9</li>
