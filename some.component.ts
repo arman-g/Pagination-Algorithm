@@ -1,21 +1,22 @@
 export class SomeComponent {
   getPagination(currentPageNum, totalPageCount): Array<any> {
-     const delta = 3;
-     let pages = new Array<any>();
-     for (let i = 0; i < totalPageCount; i++) {
-       if (i === 0 || i === totalPageCount - 1
-         || (i < currentPageNum + delta + 1 &&
-           i > currentPageNum - delta - 3)) {
-         pages.push(i + 1);
-       }
-     }
-     const currentIndex = pages.indexOf(currentPageNum);
-     if (currentIndex - this.delta > 1) {
-       pages = pages.fill("...", 1, 2);
-     }
-     if (currentIndex < pages.length - delta - 2) {
-       pages = pages.fill("...", currentIndex + delta + 1, currentIndex + delta + 2);
-     }
-     return pages;
-   }
+    const pages = new Array<any>();
+    for (let i = 0; i < totalPageCount; i++) {
+      const pageNum: any = i + 1;
+      if (i === 0 || i === totalPageCount - 1) {
+        pages.push(pageNum);
+      } else {
+        const right = currentPageNum + this.delta + 1;
+        const left = currentPageNum - this.delta - 1;
+        if (i < right && i > left - 2) {
+          if (left === pageNum || right === pageNum) {
+            pages.push("...");
+          } else {
+            pages.push(pageNum);
+          }
+        }
+      }
+    }
+    return pages;
+  }
 }
