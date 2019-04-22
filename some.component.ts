@@ -1,8 +1,9 @@
 export class SomeComponent {
+  
   getPagination(currentPageNum, totalPageCount): Array<any> {
     const pages = new Array<any>();
     for (let i = 0; i < totalPageCount; i++) {
-      const pageNum: any = i + 1;
+      const pageNum = i + 1;
       if (i === 0 || i === totalPageCount - 1) {
         pages.push(pageNum);
       } else {
@@ -19,4 +20,5 @@ export class SomeComponent {
     }
     return pages;
   }
+  
 }
